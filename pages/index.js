@@ -1,38 +1,82 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import ProTip from "../src/ProTip";
-import Link from "../src/Link";
-import Copyright from "../src/Copyright";
-import { makeStyles } from '@material-ui/core/styles';
+import Head from 'next/head'
 
-export default function Index() {
+export default function Home() {
   return (
-    <div>
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Head>
+        <title>WMS</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+        <h1 className="text-6xl font-bold">
+          Welcome to{' '}
+          <a className="text-blue-600" href="https://nextjs.org">
+            Next.js!
+          </a>
+        </h1>
+
+        <p className="mt-3 text-2xl">
+          Get started by editing{' '}
+          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
+            pages/index.js
+          </code>
+        </p>
+
+        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+          <a
+            href="https://nextjs.org/docs"
+            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Find in-depth information about Next.js features and API.
+            </p>
+          </a>
+
+          <a
+            href="https://nextjs.org/learn"
+            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Learn about Next.js in an interactive course with quizzes!
+            </p>
+          </a>
+
+          <a
+            href="https://github.com/vercel/next.js/tree/master/examples"
+            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Discover and deploy boilerplate example Next.js projects.
+            </p>
+          </a>
+
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
         </div>
-  );
+      </main>
+
+      <footer className="flex items-center justify-center w-full h-24 border-t">
+        <a
+          className="flex items-center justify-center"
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+        </a>
+      </footer>
+    </div>
+  )
 }

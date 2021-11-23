@@ -1,0 +1,22 @@
+[
+    {
+        "menu_name":"Manage Application",
+        "route":"manage-app"
+    },
+    {
+        "menu_name":"Manage Menu",
+        "route":"manage-menu"
+    },
+    {
+        "menu_name":"Manange Role",
+        "route":"warehouse"
+    },
+    {
+        "menu_name":"Manage User",
+        "route":"warehouse"
+    },
+    {
+        "menu_name":"Manage Reports",
+        "route":"warehouse"
+    }
+]
